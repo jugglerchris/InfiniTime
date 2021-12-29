@@ -24,6 +24,7 @@ namespace Pinetime {
       StopWatch,
       Metronome,
       Motion,
+      Chris,
       Steps,
       QuickSettings,
       Settings,

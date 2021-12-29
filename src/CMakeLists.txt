@@ -415,7 +415,7 @@ list(APPEND SOURCE_FILES
         displayapp/screens/Notifications.cpp
         displayapp/screens/Twos.cpp
         displayapp/screens/HeartRate.cpp
-        displayapp/screens/Motion.cpp
+        displayapp/screens/Chris.cpp
         displayapp/screens/FlashLight.cpp
         displayapp/screens/List.cpp
         displayapp/screens/BatteryInfo.cpp
@@ -624,6 +624,7 @@ set(INCLUDE_FILES
         displayapp/screens/HeartRate.h
         displayapp/screens/Metronome.h
         displayapp/screens/Motion.h
+        displayapp/screens/Chris.h
         displayapp/screens/Timer.h
         displayapp/screens/Alarm.h
         displayapp/Colors.h

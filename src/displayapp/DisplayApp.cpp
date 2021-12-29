@@ -2,6 +2,7 @@
 #include <libraries/log/nrf_log.h>
 #include <displayapp/screens/HeartRate.h>
 #include <displayapp/screens/Motion.h>
+#include <displayapp/screens/Chris.h>
 #include <displayapp/screens/Timer.h>
 #include <displayapp/screens/Alarm.h>
 #include "components/battery/BatteryController.h"
@@ -234,6 +235,9 @@ void DisplayApp::Refresh() {
               case TouchEvents::SwipeRight:
                 LoadApp(Apps::QuickSettings, DisplayApp::FullRefreshDirections::RightAnim);
                 break;
+              case TouchEvents::SwipeLeft:
+                LoadApp(Apps::Chris, DisplayApp::FullRefreshDirections::LeftAnim);
+                break;
               case TouchEvents::DoubleTap:
                 PushMessageToSystemTask(System::Messages::GoToSleep);
                 break;
@@ -444,6 +448,9 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       break;
     case Apps::Motion:
       currentScreen = std::make_unique<Screens::Motion>(this, motionController);
+      break;
+    case Apps::Chris:
+      currentScreen = std::make_unique<Screens::Chris>(this);
       break;
     case Apps::Steps:
       currentScreen = std::make_unique<Screens::Steps>(this, motionController, settingsController);
