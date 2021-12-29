@@ -91,7 +91,7 @@ WatchFaceAnalog::WatchFaceAnalog(Pinetime::Applications::DisplayApp* app,
 
   lv_style_init(&second_line_style);
   lv_style_set_line_width(&second_line_style, LV_STATE_DEFAULT, 3);
-  lv_style_set_line_color(&second_line_style, LV_STATE_DEFAULT, LV_COLOR_RED);
+  lv_style_set_line_color(&second_line_style, LV_STATE_DEFAULT, LV_COLOR_GREEN);
   lv_style_set_line_rounded(&second_line_style, LV_STATE_DEFAULT, true);
   lv_obj_add_style(second_body, LV_LINE_PART_MAIN, &second_line_style);
 
